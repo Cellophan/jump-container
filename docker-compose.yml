@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  jump-container:
+    image: cell/jump-container
+    deploy:
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${HOME}/.ssh/id_rsa.pub:${HOME}/.ssh/id_rsa.pub:ro
+
