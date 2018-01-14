@@ -32,5 +32,5 @@ for d in $(echo -n /home/*/.ssh); do
 done
 
 #Starting sshd
-exec /usr/sbin/sshd -Dd
+exec /usr/sbin/sshd -D
 
